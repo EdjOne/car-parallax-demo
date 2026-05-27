@@ -48,7 +48,7 @@
         
         // Wheel rotation
         let wheelRotation = 0;
-        const speed = 2.5; // pixels per frame
+        const speed = 8; // pixels per frame
         
         // Initialize environment elements
         function initEnvironment() {
@@ -331,7 +331,7 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
             // Update wheel rotation
-            wheelRotation += speed / (car.wheelRadius * 2) * 0.1;
+            wheelRotation += speed / (car.wheelRadius * 2);
             
             // Car body motion (subtle bounce and tilt)
             car.bodyBounce = Math.sin(wheelRotation * 3) * 2;
